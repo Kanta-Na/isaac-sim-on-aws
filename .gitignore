@@ -1,0 +1,15 @@
+
+# Ignore all pem files
+*.pem
+.ssh/
+
+# Ignore all log files
+*.log
+*.swp
+
+# Ignore all swap files
+.DS_Store
+
+# Ignore all venv files
+venv/
+__pycache__/
