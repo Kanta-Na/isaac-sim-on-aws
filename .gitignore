@@ -3,6 +3,9 @@
 *.pem
 .ssh/
 
+# Ignore all scripts files
+scripts/
+
 # Ignore all log files
 *.log
 *.swp
