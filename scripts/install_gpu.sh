@@ -27,7 +27,7 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 
 # グループ変更の即時反映（または再ログイン）
-newgrp docker
+#newgrp docker
 
 # 5. NVIDIA Container Toolkit のインストール（参考：https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html）
 echo "🧠 NVIDIA Container Toolkit のインストール中..."
