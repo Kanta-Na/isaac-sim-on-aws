@@ -11,6 +11,9 @@ echo "Isaac Sim コンテナを実行"
 docker run --name isaac-sim --entrypoint bash -it --runtime=nvidia --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
      -e "PRIVACY_CONSENT=Y" \
      -e OMNI_KIT_ALLOW_ROOT=1 \
+     -e ROS_DISTRO=humble \
+     -e RMW_IMPLEMENTATION=rmw_fastrtps_cpp \
+     -e LD_LIBRARY_PATH=/isaac-sim/exts/isaacsim.ros2.bridge/humble/lib:$LD_LIBRARY_PATH \
      -v ~/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
      -v ~/docker/isaac-sim/cache/pip:/root/.cache/pip:rw \
      -v ~/docker/isaac-sim/cache/glcache:/root/.cache/nvidia/GLCache:rw \
